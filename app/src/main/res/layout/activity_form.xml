@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8BC34A"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/sutasTruck"
+        android:layout_width="224dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/truck_content"
+        app:layout_constraintBottom_toTopOf="@+id/testForm"
+        app:layout_constraintEnd_toStartOf="@+id/farmInfo"
+        app:layout_constraintHorizontal_bias="0.647"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/sutas_truck" />
+
+    <TextView
+        android:id="@+id/farmInfo"
+        android:layout_width="189dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginRight="92dp"
+        android:background="@android:color/background_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/testForm"
+        android:layout_width="517dp"
+        android:layout_height="146dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/background_light"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/takeOrDrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/farmInfo">
+
+        <LinearLayout
+            android:id="@+id/infoForm"
+            android:layout_width="384dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/milkInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/milkType"
+                    android:layout_width="66dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/milk_type"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/milkTypeInput"
+                    android:layout_width="71dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/milkAmount"
+                    android:layout_width="73dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/milk_amount"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/milkAmountInput"
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/antibioticForm"
+                android:layout_width="match_parent"
+                android:layout_height="27dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/antibioTest"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:text="@string/antibio"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/antibioRadioGroup"
+                    android:layout_width="184dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/antibioNegRadio"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/antibiotic_f"
+                        android:textSize="12sp" />
+
+                    <RadioButton
+                        android:id="@+id/antibioPosRadio"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/antibiotic_t"
+                        android:textSize="12sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tempForm"
+                android:layout_width="match_parent"
+                android:layout_height="27dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/temp"
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:text="@string/temp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/tempRadioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/temp46degRadio"
+                        android:layout_width="85dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/deg46"
+                        android:textSize="12sp" />
+
+                    <RadioButton
+                        android:id="@+id/temp6aboveRadio"
+                        android:layout_width="85dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/more6"
+                        android:textSize="12sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/alcoholForm"
+                android:layout_width="match_parent"
+                android:layout_height="27dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/alcoholTest"
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:text="@string/alcohol"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/alcoholRadioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/alcoholNegRadio"
+                        android:layout_width="85dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/alcohol_f"
+                        android:textSize="12sp" />
+
+                    <RadioButton
+                        android:id="@+id/alcoholPosRadio"
+                        android:layout_width="85dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/alcohol_t"
+                        android:textSize="12sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/refracForm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/refrac"
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:text="@string/refrac"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/refracRadioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/refrac95belowRadio"
+                        android:layout_width="85dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/below95"
+                        android:textSize="12sp" />
+
+                    <RadioButton
+                        android:id="@+id/refrac95aboveRadio"
+                        android:layout_width="85dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/above95"
+                        android:textSize="12sp" />
+                </RadioGroup>
+            </LinearLayout>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/notesForm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="@string/note"
+            android:inputType="textMultiLine" />
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/takeOrDrop"
+        android:layout_width="265dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toStartOf="@+id/approvalButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/approvalButton">
+
+        <RadioButton
+            android:id="@+id/takeMilkRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/background_light"
+            android:text="@string/take_milk" />
+
+        <RadioButton
+            android:id="@+id/dropMilkRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/background_light"
+            android:text="@string/drop_milk" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/approvalButton"
+        android:layout_width="104dp"
+        android:layout_height="46dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginRight="84dp"
+        android:layout_marginBottom="28dp"
+        android:text="@string/approval_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

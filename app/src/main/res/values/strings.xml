@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">STM</string>
+    <string name="main_back">back</string>
+
+    <string name="id_match_error">Sistemde böyle bir kullanıcı bulunamadı!</string>
+    <string name="connection_check_ok">Bağlandı.</string>
+    <string name="connection_check_error">Bağlanılamadı!</string>
+
+    <string name="logo_content">logo</string>
+    <string name="id_hint">"   ID giriniz."</string>
+    <string name="login_button">GIRIS</string>
+
+    <string name="mission_label">Görevler:</string>
+    <string name="go_mission">Göreve Git</string>
+    <string name="change_id">Kullanıcı Değiştir</string>
+
+    <string name="truck_content">Truck</string>
+
+    <string name="milk_type">Süt Tipi:</string>
+    <string name="milk_amount">Miktar:</string>
+    <string name="antibio">Antibiyotik Testi:</string>
+    <string name="temp">Sıcaklık:</string>
+    <string name="alcohol">Alkol Testi:</string>
+    <string name="refrac">Refraktometre Değeri:</string>
+
+    <string name="antibiotic_f">Negatif / Yok</string>
+    <string name="antibiotic_t">Pozitif / Var</string>
+    <string name="deg46">4-6°C</string>
+    <string name="more6">6°C Üstü</string>
+    <string name="alcohol_f">Kesmiyor</string>
+    <string name="alcohol_t">Kesiyor</string>
+    <string name="below95">9,5°C Altı</string>
+    <string name="above95">9,5°C Üstü</string>
+    <string name="note">Açıklama giriniz.</string>
+
+    <string name="drop_milk">Sütü Bıraktım.</string>
+    <string name="take_milk">Sütü Aldım.</string>
+
+    <string name="approval_button">Onayla</string>
+
+</resources>
